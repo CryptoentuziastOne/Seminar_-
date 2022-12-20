@@ -10,7 +10,7 @@ int x = int.Parse(Console.ReadLine()!);
 int a = -x;
 while(a <= x)
 {
-    Console.Write(a+" ");
+    Console.Write($"{a} ");
     a++;
 }
 
