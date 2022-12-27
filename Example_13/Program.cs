@@ -8,16 +8,51 @@
 Console.Clear();
 Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
-//int index = 0;
-int counter = 1;
-int newnumber = 1;
-//Console.WriteLine(newnumber);
+int index = 0;
+int counter = 0;
+int numberB = 0; 
+numberB = number;
+int index_two = 1;
+int numberC = 0;
+int ten = 10;
+int result = 0;
 
-while (newnumber > 0)
+if (number < 100)
 {
-    newnumber = number / 10;
-    counter = counter + 1;
-    //Console.WriteLine(counter);
-   
+    Console.WriteLine($"Это число [{number}] является двухзначным третьей цифры нет");
 }
-Console.WriteLine(counter);
+else if (number >= 100 && number < 1000)
+{
+    result = number % 10;
+    Console.WriteLine($"Это число [{number}] является трёхзначным и третьей цифрой в нём будет [{result}]");
+}
+else if (number >= 1000 && number < 10000)
+{
+    result = (number / 10) % 10;
+        Console.WriteLine($"Это число [{number}] является четырёхзначным и третьей цифрой в нём будет [{result}]");
+}
+while (numberB != 0)
+{
+    numberB = numberB / 10;
+    index++;     
+}
+int stepen = index - 3;
+while (index_two < stepen)
+{
+    numberC = ten * 10;
+    ten = numberC;
+    index_two = index_two + 1;
+}
+int three = number / numberC;
+result = three % 10;
+
+Console.WriteLine($"Это число [{number}] является {index}-значным и третьей цифрой в нём будет [{result}]");
+
+
+/*Console.WriteLine(number);
+Console.WriteLine(stepen);
+Console.WriteLine(index);
+Console.WriteLine(numberC);
+Console.WriteLine(three);
+Console.WriteLine(result);*/
+
